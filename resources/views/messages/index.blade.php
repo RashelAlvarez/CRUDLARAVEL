@@ -2,13 +2,13 @@
 
 
 @section('contenido')
-    <h1>Todos los mensaaes</h1>
+    <h1>Todos los mensajes</h1>
 
-    <table border="1" width="100%">
+    <table  class="table table-striped table-hover">
         <thead>
             <tr>    
                 <th>ID</th>
-                <th>NOmbre</th>
+                <th>Nombre</th>
                 <th>Email</th>
                 <th>Mensaje</th>
                 <th>Acciones</th>
@@ -24,12 +24,12 @@
                     {{$message->nombre}}</a></td>
                 <td>{{$message->email}}</td>
                 <td>{{$message->mensaje}}</td>
-                <td><a href="{{route('messages.edit', $message->id)}}">
+                <td><a href="{{route('messages.edit', $message->id)}}" class="btn btn-primary btn-sm">
                     Editar</a>
                 <form style="display:inline" action="{{route('messages.destroy', $message->id)}}" method="POST">
                    @csrf
                    {!! method_field('DELETE')!!}
-                    <button type="submit">Eliminar</button>
+                    <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
                 </form></td>
             </tr>
             @endforeach

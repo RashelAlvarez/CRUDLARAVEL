@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Carbon\Carbon;
 use DB;
 use App\Models\Message;
+use App\Http\Requests\ContactoRequest;
 class MessagesController extends Controller
 {
     /**
@@ -36,7 +37,7 @@ class MessagesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ContactoRequest $request)
     {
          //return $request->all(); //visualizar todos los datos en formato json
         // return $request->input('nombre'); //retorna el valor de un elemento
@@ -84,7 +85,7 @@ class MessagesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ContactoRequest $request, $id)
     {
         //
         //ACTUALIZAR MENSAJE con eloquent/** */
