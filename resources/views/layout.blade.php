@@ -27,20 +27,14 @@
 
 <body>
 <header>
-    <nav  class="navbar navbar-expand-lg bg-light pt-3 pb-3 ">
+    <nav  class="navbar navbar-expand-lg navbar-dark bg-dark pt-3 pb-3 ">
         <div class="container">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="{{request()->is('/') ? 'active' : '' }} nav-link" href="{{route('home') }} ">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="{{request()->is('contacto/*') ? 'active' : '' }} nav-link" href="{{route('saludos', 'Rashel')}} ">Saludo</a>
-                </li>
                 <li class="nav-item"> 
-                    <a class="{{request()->is('mensajes/create') ? 'active' : '' }} nav-link" href="{{ route('messages.create')}} ">Contacto</a>
+                    <a class="{{request()->is('mensajes/create') ? 'active' : '' }} nav-link" href="{{ route('messages.create')}} ">Crear contacto</a>
                 </li>
                 <li class="nav-item">
-                    <a class="{{request()->is('mensajes') ? 'active' : '' }} nav-link" href="{{ route('messages.index')}} ">Todos los mensajes</a>
+                    <a class="{{request()->is('/') ? 'active' : '' }} nav-link" href="{{ route('messages.index')}} ">Todos los contactos</a>
                 </li>
             </ul>
         </div>
@@ -54,6 +48,6 @@
 
 </body>
     
-        <footer class="text-center bg-light p-4 footer">Copyright {{date('Y')}}</footer>
+        <footer class="text-center bg-light p-4 footer">Copyright Rashel Alvarez {{date('Y')}}</footer>
   
 </html>

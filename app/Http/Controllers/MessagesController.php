@@ -57,8 +57,6 @@ class MessagesController extends Controller
      */
     public function show($id)
     {
-        //
-      //  $message=DB::table('messages')->where('id', $id)->first();
         $message = Message::findOrFail($id); //eloquent
         //el metodo find or fail falla cuando no encuentra el parametro y retorna un 404.blade.php
         return view('messages.show', compact('message'));
@@ -92,9 +90,6 @@ class MessagesController extends Controller
         $message = Message::findOrFail($id);
         $message->update($request->all());
       
-       
-
-
         //REDIRECCIONAR
 
         return redirect()->route('messages.index');

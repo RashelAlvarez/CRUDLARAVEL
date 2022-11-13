@@ -7,8 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    <p>  no podemos encontrar la pagina
+    <p>  No podemos encontrar la pagina
     </p>
-    <a href="{{route('home')}}">regresar al home</a>
+    <a href="{{route('messages.index')}}">Regresar al home</a>
 </body>
 </html>

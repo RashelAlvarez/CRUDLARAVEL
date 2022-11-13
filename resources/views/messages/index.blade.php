@@ -2,9 +2,9 @@
 
 
 @section('contenido')
-    <h1>Todos los mensajes</h1>
+    <h1>Todos los contactos</h1>
 
-    <table  class="table table-striped table-hover">
+    <table  class="table table-striped table-hover mt-3">
         <thead>
             <tr>    
                 <th>ID</th>
